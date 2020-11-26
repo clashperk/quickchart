@@ -3,6 +3,7 @@ const chartBoxViolinPlot = require('chartjs-chart-box-and-violin-plot');
 const chartDataLabels = require('chartjs-plugin-datalabels');
 const chartRadialGauge = require('chartjs-chart-radial-gauge');
 const { CanvasRenderService } = require('chartjs-node-canvas');
+const { Image } = require('canvas');
 const fs = require('fs');
 const path = require('path');
 const buffered = fs.readFileSync(path.join(__dirname, 'logo.png'));
@@ -245,7 +246,9 @@ function render(width, height, backgroundColor, devicePixelRatio, chart, brandin
 				ctx.fillRect(0, 0, chartInstance.chart.width, chartInstance.chart.height);
 
 				if (branding) {
-					ctx.drawImage(buffered, width - 75, 12, 15, 15);
+					const img = new Image();
+					img.onload = () => ctx.drawImage(img, width - 75, 12, 15, 15);
+					img.src = buffered;
 					ctx.font = 'bold 8px sans-serif';
 					ctx.fillStyle = '#666';
 					ctx.fillText('ClashPerk', width - 58, 20);
