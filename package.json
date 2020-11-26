@@ -2,9 +2,10 @@
 	"name": "@clashperk/chartgen",
 	"version": "1.0.1",
 	"description": "Chart Generator for ClashPerk Bot",
-	"main": "index.js",
 	"author": "SUVAJIT <suvajit.me@gmail.com>",
 	"license": "ISC",
+	"main": "index.js",
+	"types": "index.d.ts",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},

@@ -75,7 +75,7 @@ function addBackgroundColors(chart) {
 	}
 }
 
-module.exports = function renderChart(width, height, backgroundColor, devicePixelRatio, chart, buffer) {
+function render(width, height, backgroundColor, devicePixelRatio, chart, buffer) {
 	chart.options = chart.options || {};
 
 	if (chart.type === 'donut') {
@@ -270,3 +270,5 @@ module.exports = function renderChart(width, height, backgroundColor, devicePixe
 		return Promise.reject(err.message || err);
 	}
 }
+
+module.exports = { render };
