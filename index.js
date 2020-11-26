@@ -3,6 +3,8 @@ const chartBoxViolinPlot = require('chartjs-chart-box-and-violin-plot');
 const chartDataLabels = require('chartjs-plugin-datalabels');
 const chartRadialGauge = require('chartjs-chart-radial-gauge');
 const { CanvasRenderService } = require('chartjs-node-canvas');
+const fs = require('fs');
+const buffered = fs.readFileSync('./logo.png');
 
 // require('chartjs-plugin-piechart-outlabels');
 // require('chartjs-plugin-doughnutlabel');
@@ -75,7 +77,7 @@ function addBackgroundColors(chart) {
 	}
 }
 
-function render(width, height, backgroundColor, devicePixelRatio, chart, buffer) {
+function render(width, height, backgroundColor, devicePixelRatio, chart, branding = false) {
 	chart.options = chart.options || {};
 
 	if (chart.type === 'donut') {
@@ -240,10 +242,13 @@ function render(width, height, backgroundColor, devicePixelRatio, chart, buffer)
 				const { ctx } = chartInstance.chart;
 				ctx.fillStyle = backgroundColor;
 				ctx.fillRect(0, 0, chartInstance.chart.width, chartInstance.chart.height);
-				ctx.drawImage(buffer, width - 75, 12, 15, 15);
-				ctx.font = 'bold 8px sans-serif';
-				ctx.fillStyle = '#666';
-				ctx.fillText('ClashPerk', width - 58, 20);
+
+				if (branding) {
+					ctx.drawImage(buffered, width - 75, 12, 15, 15);
+					ctx.font = 'bold 8px sans-serif';
+					ctx.fillStyle = '#666';
+					ctx.fillText('ClashPerk', width - 58, 20);
+				}
 			}
 		}
 	});
