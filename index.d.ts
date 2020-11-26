@@ -5,6 +5,6 @@ declare module '@clashperk/chartgen' {
 		backgroundColor: string,
 		devicePixelRatio: number,
 		chart: any,
-		buffer: Buffer
+		branding: boolean
 	): Promise<Buffer>
 }
