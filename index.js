@@ -4,7 +4,8 @@ const chartDataLabels = require('chartjs-plugin-datalabels');
 const chartRadialGauge = require('chartjs-chart-radial-gauge');
 const { CanvasRenderService } = require('chartjs-node-canvas');
 const fs = require('fs');
-const buffered = fs.readFileSync('./logo.png');
+const path = require('path');
+const buffered = fs.readFileSync(path.join(__dirname, 'logo.png'));
 
 // require('chartjs-plugin-piechart-outlabels');
 // require('chartjs-plugin-doughnutlabel');
