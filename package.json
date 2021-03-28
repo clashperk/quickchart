@@ -1,7 +1,7 @@
 {
-	"name": "@clashperk/chartgen",
+	"name": "@clashperk/quickchart",
 	"version": "1.0.1",
-	"description": "Chart Generator for ClashPerk Bot",
+	"description": "Chart generator for clashperk bot",
 	"author": "SUVAJIT <suvajit.me@gmail.com>",
 	"license": "ISC",
 	"main": "index.js",

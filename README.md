@@ -1,1 +1,1 @@
-# Chart Generator for ClashPerk Bot
+# Chart generator for clashperk bot

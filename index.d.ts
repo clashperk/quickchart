@@ -1,4 +1,4 @@
-declare module '@clashperk/chartgen' {
+declare module '@clashperk/quickchart' {
 	export function render(
 		width: number,
 		height: number,
