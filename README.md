@@ -1,1 +1,1 @@
-# Chart generator for clashperk bot
+# Canvas Chart Generator

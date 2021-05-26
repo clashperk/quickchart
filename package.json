@@ -1,7 +1,7 @@
 {
 	"name": "@clashperk/quickchart",
 	"version": "1.0.1",
-	"description": "Chart generator for clashperk bot",
+	"description": "Canvas Chart Generator",
 	"author": "SUVAJIT <suvajit.me@gmail.com>",
 	"license": "ISC",
 	"main": "index.js",
